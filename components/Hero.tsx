@@ -93,8 +93,36 @@ export function Hero() {
             <div>
               <motion.span
                 variants={item}
-                className="inline-flex rounded-full border border-indigo-400/35 bg-indigo-500/10 px-3 py-1 text-xs font-medium tracking-wide text-indigo-200/90"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/35 bg-indigo-500/10 px-3 py-1 text-xs font-medium tracking-wide text-indigo-200/90"
               >
+                <span className="relative flex size-2.5 items-center justify-center">
+                  <span className="absolute size-1.5 rounded-full bg-indigo-300" />
+                  {reduceMotion ? null : (
+                    <>
+                      <motion.span
+                        aria-hidden
+                        className="absolute size-2.5 rounded-full border border-indigo-300/60"
+                        animate={{ scale: [1, 1.95], opacity: [0.55, 0] }}
+                        transition={{
+                          duration: 1.4,
+                          repeat: Infinity,
+                          ease: "easeOut",
+                        }}
+                      />
+                      <motion.span
+                        aria-hidden
+                        className="absolute size-2.5 rounded-full border border-indigo-300/45"
+                        animate={{ scale: [1, 2.25], opacity: [0.4, 0] }}
+                        transition={{
+                          duration: 1.4,
+                          delay: 0.25,
+                          repeat: Infinity,
+                          ease: "easeOut",
+                        }}
+                      />
+                    </>
+                  )}
+                </span>
                 Computer Science Undergraduate
               </motion.span>
               <motion.h1
