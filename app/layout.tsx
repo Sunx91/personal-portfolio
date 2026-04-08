@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
-  title: "Sunath Sandul | Launching Soon",
-  description:
-    "Personal portfolio of Sunath Sandul — Launching Soon. Stay tuned!",
+  title: "Sunath Sandul | Software Engineer",
+  description: "Backend, AI, Cybersecurity portfolio",
 };
 
 export default function RootLayout({
@@ -13,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">{children}</body>
+    <html lang="en" className={inter.variable}>
+      <body className={`${inter.className} font-sans`}>{children}</body>
     </html>
   );
 }
