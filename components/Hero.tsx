@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { useRef } from "react";
 import { HeroWireframeScene } from "@/components/HeroWireframeScene";
 import { useSiteReady } from "@/components/SiteEntrance";
@@ -39,6 +39,11 @@ const social = [
     Icon: Linkedin,
   },
   {
+    href: "https://instagram.com/sandul.ig",
+    label: "Instagram",
+    Icon: Instagram,
+  },
+  {
     href: "mailto:sunx.3295@gmail.com",
     label: "Email",
     Icon: Mail,
@@ -58,7 +63,7 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-dvh min-w-0 flex-col overflow-x-hidden md:min-h-dvh"
+      className="relative flex min-h-dvh min-w-0 flex-col md:min-h-dvh"
     >
       <motion.div
         className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
@@ -151,9 +156,9 @@ export function Hero() {
                   {...(reduceMotion
                     ? {}
                     : {
-                        whileHover: { scale: 1.03, y: -1 },
-                        whileTap: { scale: 0.98 },
-                      })}
+                      whileHover: { scale: 1.03, y: -1 },
+                      whileTap: { scale: 0.98 },
+                    })}
                   transition={{ duration: 0.2, ease: easeOut }}
                   className="flex size-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-zinc-300 shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-colors hover:border-white/20 hover:text-white"
                 >

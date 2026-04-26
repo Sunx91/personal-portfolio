@@ -13,10 +13,10 @@ const POV_OPTIONS: {
   label: string;
   Icon: typeof User;
 }[] = [
-  { id: "everyone", label: "Everyone", Icon: User },
-  { id: "recruiters", label: "Recruiters", Icon: Briefcase },
-  { id: "developers", label: "Developers", Icon: Code },
-];
+    { id: "everyone", label: "Everyone", Icon: User },
+    { id: "recruiters", label: "Recruiters", Icon: Briefcase },
+    { id: "developers", label: "Developers", Icon: Code },
+  ];
 
 const POV_COPY: Record<PovId, string> = {
   everyone:
@@ -130,10 +130,10 @@ export function About() {
                 <span className="h-0.5 w-3 rounded-full bg-indigo-400/70" />
               </div>
               <p className="text-4xl font-bold tabular-nums tracking-tight text-indigo-200 sm:text-5xl">
-                02
+                Learning
               </p>
               <p className="mt-1 text-sm font-medium text-[#a1a1aa]">
-                Years of Experience
+                Through Execution
               </p>
             </div>
           </motion.div>
@@ -169,11 +169,10 @@ export function About() {
                     aria-selected={active}
                     id={`about-pov-${id}`}
                     onClick={() => setPov(id)}
-                    className={`relative flex items-center gap-2 pb-2 text-sm font-medium transition-colors ${
-                      active
-                        ? "text-white"
-                        : "text-zinc-500 hover:text-zinc-300"
-                    }`}
+                    className={`relative flex items-center gap-2 pb-2 text-sm font-medium transition-colors ${active
+                      ? "text-white"
+                      : "text-zinc-500 hover:text-zinc-300"
+                      }`}
                   >
                     <Icon
                       className="size-4 shrink-0 opacity-90"

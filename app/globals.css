@@ -2,10 +2,13 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-  @apply m-0 min-h-dvh bg-black text-white antialiased;
-  overflow-x: hidden;
+  @apply m-0 bg-black text-white antialiased;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }

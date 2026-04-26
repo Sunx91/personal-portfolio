@@ -62,6 +62,7 @@ const SAFEPAWS_LIVE = "https://safepaws.site";
 const SAFEPAWS_SDGP_SHOWCASE =
   "https://www.sdgp.lk/project/391cbd2b-c7db-4f90-b921-87d6d0d41514";
 const XFIESTA_LIVE = "https://x-fiesta-26.vercel.app/";
+const OneQR_Live = "https://oneqr.space/";
 
 const PROJECTS: Project[] = [
   {
@@ -100,6 +101,7 @@ const PROJECTS: Project[] = [
     kind: "backend",
     tech: ["React", "Flask", "LangChain", "ChromaDB"],
     coverMonogram: "DM",
+    coverImage: "/projects/desertmind-view.png",
     githubRepos: [{ label: "Repository", href: "https://github.com/Sunx91/DesertMind" }],
     liveDemo: null,
   },
@@ -114,6 +116,18 @@ const PROJECTS: Project[] = [
     coverImage: "/projects/xfiesta-view.png",
     githubRepos: [],
     liveDemo: XFIESTA_LIVE,
+  },
+  {
+    id: "oneqr",
+    title: "OneQR",
+    description: "A privacy-first QR code generator that lets you create static QR codes instantly - no login, no tracking, and no hidden limits.",
+    year: "2026",
+    kind: "fullstack",
+    tech: ["NextJS", "TailwindCSS"],
+    coverMonogram: "OQ",
+    coverImage: "/projects/oneqr-view.png",
+    githubRepos: [],
+    liveDemo: OneQR_Live,
   },
 ];
 
@@ -338,11 +352,10 @@ export function Projects() {
                 type="button"
                 variants={filterButtonMotion}
                 onClick={() => setFilter(id)}
-                className={`rounded-md border px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${
-                  active
-                    ? "border-white bg-white text-black"
-                    : "border-zinc-700 bg-transparent text-white hover:border-zinc-600 hover:bg-zinc-900"
-                }`}
+                className={`rounded-md border px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${active
+                  ? "border-white bg-white text-black"
+                  : "border-zinc-700 bg-transparent text-white hover:border-zinc-600 hover:bg-zinc-900"
+                  }`}
               >
                 {label}
               </motion.button>

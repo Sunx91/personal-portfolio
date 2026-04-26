@@ -31,15 +31,7 @@ const navBarItem = {
 
 export function Navbar() {
   const ready = useSiteReady();
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -59,17 +51,15 @@ export function Navbar() {
           : { opacity: 0, y: -20 }
       }
       transition={{ duration: 0.55, ease: easeOut }}
-      className="pointer-events-none fixed left-0 right-0 top-0 z-50 flex justify-center px-3 pt-4 sm:px-4 sm:pt-5"
+      className="relative z-50 w-full shrink-0 px-3 pt-4 sm:px-4 sm:pt-5"
     >
-      <div className="pointer-events-auto relative w-full max-w-4xl">
+      <div className="pointer-events-auto relative mx-auto w-full max-w-6xl px-4">
       <motion.nav
         aria-label="Primary"
         variants={navBarStagger}
         initial="hidden"
         animate={ready ? "show" : "hidden"}
-        className={`flex w-full items-center justify-between gap-2 rounded-full border border-[#27272a] px-3 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl transition-colors duration-300 sm:gap-4 sm:px-5 sm:py-2.5 ${
-          scrolled ? "bg-zinc-950/85" : "bg-zinc-950/65"
-        }`}
+        className="flex w-full items-center justify-between gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 transition-colors duration-300 sm:gap-4 sm:px-5 sm:py-2.5"
       >
         <motion.a
           variants={navBarItem}
