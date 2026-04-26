@@ -9,17 +9,15 @@ import { Skills } from "@/components/Skills";
 export default function Home() {
   return (
     <SiteEntrance>
-      <div className="relative min-h-dvh overflow-x-hidden bg-black text-white">
-        <div className="relative z-10">
-          <Navbar />
-          <main>
+      <div className="relative flex h-dvh flex-col bg-black text-white overflow-hidden">
+        <Navbar />
+        <main className="relative z-10 flex-1 overflow-y-auto overflow-x-hidden scroll-smooth">
             <Hero />
             <About />
             <Skills />
             <Projects />
             <Contact />
           </main>
-        </div>
       </div>
     </SiteEntrance>
   );

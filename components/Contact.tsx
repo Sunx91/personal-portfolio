@@ -5,6 +5,7 @@ import {
   Briefcase,
   Github,
   Linkedin,
+  Instagram,
   Mail,
   Send,
 } from "lucide-react";
@@ -256,6 +257,14 @@ export function Contact() {
               aria-label="LinkedIn"
             >
               <Linkedin className="size-5" strokeWidth={1.5} />
+            </a>
+            <a href="https://www.instagram.com/sandul.ig"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-500 transition hover:text-indigo-300"
+              aria-label="Instagram"
+            >
+              <Instagram className="size-5" strokeWidth={1.5} />
             </a>
             <a
               href="mailto:sunx.3295@gmail.com"
