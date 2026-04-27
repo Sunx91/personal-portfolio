@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sunath Sandul | Software Engineer",
+  title: "Sunath Sandul | Computer Science Undergraduate",
   description: "Backend, AI, Cybersecurity portfolio",
 };
 
